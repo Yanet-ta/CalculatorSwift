@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					423CFB4B1D9854E800A75EB5 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 7PVFF8573R;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7PVFF8573R;
 				INFOPLIST_FILE = CalculatorSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovaYana.CalculatorSwift;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7PVFF8573R;
 				INFOPLIST_FILE = CalculatorSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanovaYana.CalculatorSwift;
