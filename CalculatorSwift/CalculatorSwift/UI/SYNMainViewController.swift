@@ -25,6 +25,8 @@ class SYNMainViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
     
+    @IBOutlet weak var inputLabel: UILabel!
+    
     @IBAction func didTapAllClearButton(_ sender: AnyObject) {
         firstArg = 0
         secondArg = 0
@@ -32,6 +34,7 @@ class SYNMainViewController: UIViewController {
         lastActionWasOperation = false
         operationsWasUsed = false
         updateDisplayText()
+        inputLabel.text = ""
     }
     
     @IBAction func didTapClearButton(_ sender: AnyObject) {
@@ -45,22 +48,27 @@ class SYNMainViewController: UIViewController {
     }
     
     @IBAction func didTapAdditionOperationButton(_ sender: AnyObject) {
+        //inputLabel.text?.append("+")
         processOperation(operation: SYNOperations.AdditionOperation)
     }
     
     @IBAction func didTapSubtractionOperationButton(_ sender: AnyObject) {
+        //inputLabel.text?.append("-")
         processOperation(operation: SYNOperations.SubtractionOperation)
     }
     
     @IBAction func didTapMultiplicationOperationButton(_ sender: AnyObject) {
+        //inputLabel.text?.append("*")
         processOperation(operation: SYNOperations.MultiplicationOperation)
     }
     
     @IBAction func didTapDivisionOperationButton(_ sender: AnyObject) {
+        //inputLabel.text?.append("/")
         processOperation(operation: SYNOperations.DivisionOperation)
     }
     
     @IBAction func didTapTotalButton(_ sender: AnyObject) {
+        //inputLabel.text?.append("=")
         processOperation(operation: SYNOperations.UndefOperation)
     }
     
@@ -77,7 +85,7 @@ class SYNMainViewController: UIViewController {
             }
             secondArg = secondArg * 10 + Double(enteredNumber)
             updateDisplayText()
-            
+            //inputLabel.text?.append(String(sender.tag))
         }
     }
 
@@ -96,6 +104,9 @@ class SYNMainViewController: UIViewController {
                 default: break
                 }
             }
+            //else {
+                //inputLabel.text = String(format: "%.f", secondArg)
+            //}
         }
         firstArg = secondArg
         currentOperation = operation

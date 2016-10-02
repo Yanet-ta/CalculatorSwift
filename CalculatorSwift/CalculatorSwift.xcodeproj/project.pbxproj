@@ -302,6 +302,7 @@
 				423CFB601D9854E800A75EB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
