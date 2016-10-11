@@ -25,23 +25,13 @@
                                         <color key="textColor" red="0.9137254901960784" green="0.83137254901960778" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hh-P1-AET" userLabel="InputLabel">
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.82352941176470584" alpha="0.85212823275862071" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="6Hh-P1-AET" firstAttribute="top" relation="greaterThanOrEqual" secondItem="T6X-Jt-GXi" secondAttribute="top" constant="5" id="3dk-TO-ZMd"/>
                                     <constraint firstItem="NCA-r4-kjL" firstAttribute="leading" secondItem="T6X-Jt-GXi" secondAttribute="leading" constant="4" id="6Jz-66-EWZ"/>
                                     <constraint firstAttribute="trailing" secondItem="NCA-r4-kjL" secondAttribute="trailing" constant="4" id="BoC-yB-ZX7"/>
                                     <constraint firstAttribute="bottom" secondItem="NCA-r4-kjL" secondAttribute="bottom" priority="700" constant="16" id="DkQ-BQ-Llz"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NCA-r4-kjL" secondAttribute="bottom" constant="4" id="HSk-Z5-uOP"/>
-                                    <constraint firstItem="6Hh-P1-AET" firstAttribute="leading" secondItem="T6X-Jt-GXi" secondAttribute="leading" constant="4" id="L0c-ey-hVv"/>
-                                    <constraint firstItem="NCA-r4-kjL" firstAttribute="top" secondItem="6Hh-P1-AET" secondAttribute="bottom" constant="10" id="cs1-3T-bpQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="6Hh-P1-AET" secondAttribute="trailing" constant="8" id="ewm-Ik-mUu"/>
-                                    <constraint firstItem="6Hh-P1-AET" firstAttribute="top" relation="greaterThanOrEqual" secondItem="T6X-Jt-GXi" secondAttribute="top" priority="650" constant="10" id="k8R-YW-0fh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lye-3Q-cM6" userLabel="View1">
@@ -311,7 +301,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-E8-I17">
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=",">
+                                        <state key="normal" title=".">
                                             <color key="titleColor" red="0.93333333333333335" green="0.8666666666666667" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -376,7 +366,6 @@
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="NCA-r4-kjL" id="9wn-9j-Oa2"/>
-                        <outlet property="inputLabel" destination="6Hh-P1-AET" id="8hf-M9-of0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

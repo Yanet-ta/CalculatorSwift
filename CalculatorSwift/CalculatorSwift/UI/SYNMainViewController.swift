@@ -17,15 +17,14 @@ class SYNMainViewController: UIViewController {
         case DivisionOperation  = 4
     }
     
-    var firstArg: Double = 0
-    var secondArg: Double = 0
+    var firstArg: Decimal = 0
+    var secondArg: Decimal = 0
     var currentOperation = SYNOperations.UndefOperation
     var lastActionWasOperation = false
     var operationsWasUsed = false
 
     @IBOutlet weak var displayLabel: UILabel!
     
-    @IBOutlet weak var inputLabel: UILabel!
     
     @IBAction func didTapAllClearButton(_ sender: AnyObject) {
         firstArg = 0
@@ -34,7 +33,6 @@ class SYNMainViewController: UIViewController {
         lastActionWasOperation = false
         operationsWasUsed = false
         updateDisplayText()
-        inputLabel.text = ""
     }
     
     @IBAction func didTapClearButton(_ sender: AnyObject) {
@@ -48,32 +46,31 @@ class SYNMainViewController: UIViewController {
     }
     
     @IBAction func didTapAdditionOperationButton(_ sender: AnyObject) {
-        //inputLabel.text?.append("+")
         processOperation(operation: SYNOperations.AdditionOperation)
     }
     
     @IBAction func didTapSubtractionOperationButton(_ sender: AnyObject) {
-        //inputLabel.text?.append("-")
         processOperation(operation: SYNOperations.SubtractionOperation)
     }
     
     @IBAction func didTapMultiplicationOperationButton(_ sender: AnyObject) {
-        //inputLabel.text?.append("*")
         processOperation(operation: SYNOperations.MultiplicationOperation)
     }
     
     @IBAction func didTapDivisionOperationButton(_ sender: AnyObject) {
-        //inputLabel.text?.append("/")
         processOperation(operation: SYNOperations.DivisionOperation)
     }
     
     @IBAction func didTapTotalButton(_ sender: AnyObject) {
-        //inputLabel.text?.append("=")
-        processOperation(operation: SYNOperations.UndefOperation)
+        if currentOperation == SYNOperations.DivisionOperation && secondArg == 0 {
+            displayError()
+        }
+        else {
+            processOperation(operation: SYNOperations.UndefOperation)
+        }
     }
     
     @IBAction func didTapCommaButton(_ sender: AnyObject) {
-        
     }
     
     @IBAction func didTapNumButton(_ sender: AnyObject) {
@@ -83,9 +80,8 @@ class SYNMainViewController: UIViewController {
                 secondArg = 0
                 lastActionWasOperation = false
             }
-            secondArg = secondArg * 10 + Double(enteredNumber)
+            secondArg = secondArg * 10 + Decimal(enteredNumber)
             updateDisplayText()
-            //inputLabel.text?.append(String(sender.tag))
         }
     }
 
@@ -104,9 +100,6 @@ class SYNMainViewController: UIViewController {
                 default: break
                 }
             }
-            //else {
-                //inputLabel.text = String(format: "%.f", secondArg)
-            //}
         }
         firstArg = secondArg
         currentOperation = operation
@@ -115,21 +108,21 @@ class SYNMainViewController: UIViewController {
         updateDisplayText()
     }
     
-    
     func updateDisplayText() {
-        displayLabel.text = String(format: "%.f", secondArg)
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 5
+        formatter.minimumIntegerDigits = 1
+        displayLabel.text = formatter.string(for: secondArg)
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func displayError() {
+        displayLabel.text = "ERROR"
+        firstArg = 0
+        secondArg = 0
+        currentOperation = SYNOperations.UndefOperation
+        lastActionWasOperation = false
+        operationsWasUsed = false
     }
-    */
+    
 
 }
