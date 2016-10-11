@@ -13,7 +13,10 @@ Deployment target 9.0
 * "C" button clear one previous operation
 * "ERROR" output wil be display after division by zero 
 
+![](https://raw.githubusercontent.com/Yanet-ta/CalculatorSwift/master/Resources/Screen1.png)
+
+![](https://raw.githubusercontent.com/Yanet-ta/CalculatorSwift/master/Resources/Screen2.png)
+
 #### Next versions:
 * "." button will be supported
 * Arbitrary-precision arithmetic will be supported
-
